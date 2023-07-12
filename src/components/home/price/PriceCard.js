@@ -1,5 +1,5 @@
-import React from "react"
-import { price } from "../../data/Data"
+import React from 'react';
+import { price } from '../../data/Data';
 
 const PriceCard = () => {
   return (
@@ -12,34 +12,35 @@ const PriceCard = () => {
             </div>
             <h3>{item.plan}</h3>
             <h1>
-              <span>$</span>
+              <span>₹</span>
               {item.price}
             </h1>
             <p>{item.ptext}</p>
 
             <ul>
               {item.list.map((val) => {
-                const { icon, text, change } = val
+                const { icon, text, change } = val;
                 return (
                   <li>
                     <label
                       style={{
-                        background: change === "color" ? "#dc35451f" : "#27ae601f",
-                        color: change === "color" ? "#dc3848" : "#27ae60",
+                        background:
+                          change === 'color' ? '#dc35451f' : '#27ae601f',
+                        color: change === 'color' ? '#dc3848' : '#27ae60',
                       }}
                     >
                       {icon}
                     </label>
                     <p>{text}</p>
                   </li>
-                )
+                );
               })}
             </ul>
             <button
               className='btn5'
               style={{
-                background: item.plan === "Standard" ? "#27ae60" : "#fff",
-                color: item.plan === "Standard" ? "#fff" : "#27ae60",
+                background: item.plan === 'Standard' ? '#27ae60' : '#fff',
+                color: item.plan === 'Standard' ? '#fff' : '#27ae60',
               }}
             >
               Start {item.plan}
@@ -48,7 +49,7 @@ const PriceCard = () => {
         ))}
       </div>
     </>
-  )
-}
+  );
+};
 
-export default PriceCard
+export default PriceCard;
